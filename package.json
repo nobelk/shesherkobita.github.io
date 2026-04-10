@@ -1,0 +1,11 @@
+{
+  "name": "shesherkobita",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "typecheck": "node --check scripts/verify-site.mjs && node --check scripts/lint-static.mjs",
+    "test": "node scripts/verify-site.mjs",
+    "lint": "node scripts/lint-static.mjs"
+  }
+}
