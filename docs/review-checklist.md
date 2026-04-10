@@ -4,12 +4,14 @@
 
 Current repository state reviewed in this worker lane:
 
-- Present: `README.md`, logo asset, two concept design images
-- Missing: HTML entry file, CSS stylesheet, responsive implementation, QA evidence
+- Present: static `index.html`, `styles.css`, verification scripts, logo
+  asset, and concept design images
+- Review focus: content accuracy, single-column responsiveness, visual
+  hierarchy, and QA evidence
 
-This means implementation-dependent checks are **not yet passable**
-from the current baseline. The checklist below defines the review
-target for the final static page.
+Implementation-dependent checks are now passable in principle. The
+checklist below defines the review target for the refined final static
+page.
 
 ## Content Completeness
 
