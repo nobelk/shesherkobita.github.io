@@ -1,8 +1,7 @@
 # robots.txt for Shesher Kobita
-# https://shesherkobita.github.io/
+# https://shesherkobita.com/
 
 User-agent: *
 Allow: /
-Disallow: /index-example.html
 
-Sitemap: https://shesherkobita.github.io/sitemap.xml
+Sitemap: https://shesherkobita.com/sitemap.xml
