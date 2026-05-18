@@ -47,7 +47,7 @@ The final page should cover all of the following topics in a clear single-page f
 7. **Worship Access**
    - State that mosque access is conveniently nearby.
 8. **Reservation Contact**
-   - Include: `shesherkobita@gmail.com`
+   - Include: `shesherkobita.contact@gmail.com`
 
 ## Content Priorities
 

@@ -23,7 +23,7 @@ page.
 - [ ] Organic food offering is described
 - [ ] Activities are described
 - [ ] Worship access near the mosque is described
-- [ ] Reservation contact `shesherkobita@gmail.com` is present and easy to find
+- [ ] Reservation contact `shesherkobita.contact@gmail.com` is present and easy to find
 - [ ] Both concept design images are prominently featured
 
 ## Visual / Design Quality
