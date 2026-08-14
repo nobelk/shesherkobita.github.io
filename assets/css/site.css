@@ -1,0 +1,205 @@
+/*
+	Shesher Kobita — project-specific styles.
+	Layered on top of the HTML5 UP "Read Only" template (assets/css/main.css).
+	Everything in this file is bespoke; main.css is left as shipped.
+*/
+
+/* Bengali typography ---------------------------------------------------- */
+
+	html[lang="bn"] body,
+	html[lang="bn"] input,
+	html[lang="bn"] select,
+	html[lang="bn"] textarea,
+	.bn {
+		font-family: "Noto Sans Bengali", "Hind Siliguri", "Bangla MN", "Nirmala UI", "Lato", sans-serif;
+	}
+
+	html[lang="bn"] body {
+		line-height: 1.85;
+	}
+
+	html[lang="bn"] h1,
+	html[lang="bn"] h2,
+	html[lang="bn"] h3,
+	html[lang="bn"] h4,
+	html[lang="bn"] h5 {
+		letter-spacing: 0;
+		line-height: 1.5;
+		text-transform: none;
+	}
+
+	html[lang="bn"] #header h1#logo a {
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	html[lang="bn"] #header > nav ul li a,
+	html[lang="bn"] .button {
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+/* Language switcher ----------------------------------------------------- */
+
+	#header .lang-switch {
+		-moz-flex-shrink: 0;
+		-webkit-flex-shrink: 0;
+		-ms-flex-shrink: 0;
+		flex-shrink: 0;
+		list-style: none;
+		margin: 0;
+		padding: 1.5em 2em 0 2em;
+		text-align: center;
+	}
+
+		#header .lang-switch li {
+			display: inline-block;
+			padding: 0 0.25em;
+		}
+
+			#header .lang-switch li a {
+				border: solid 2px rgba(255, 255, 255, 0.4);
+				border-radius: 4px;
+				color: #ffffff !important;
+				display: inline-block;
+				font-size: 0.8em;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				line-height: 1;
+				padding: 0.7em 1.1em;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+
+				#header .lang-switch li a[aria-current="page"] {
+					background: #ffffff;
+					border-color: #ffffff;
+					color: #4acaa8 !important;
+				}
+
+/* Key figures ("at a glance") ------------------------------------------- */
+
+	ul.stats {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0 0 2em -1.5em;
+		padding: 0;
+	}
+
+		ul.stats li {
+			-moz-flex: 1 1 11em;
+			-webkit-flex: 1 1 11em;
+			-ms-flex: 1 1 11em;
+			flex: 1 1 11em;
+			margin: 0 0 1.5em 0;
+			padding: 0 0 0 1.5em;
+		}
+
+			ul.stats li .value {
+				border-top: solid 3px #4acaa8;
+				color: #4acaa8;
+				display: block;
+				font-size: 1.5em;
+				font-weight: 700;
+				line-height: 1.3;
+				padding-top: 0.4em;
+			}
+
+			ul.stats li .label {
+				color: #888888;
+				display: block;
+				font-size: 0.85em;
+				line-height: 1.5;
+			}
+
+/* Figures with captions -------------------------------------------------- */
+
+	figure.figure {
+		display: block;
+		margin: 0 0 2em 0;
+	}
+
+		figure.figure img {
+			display: block;
+			width: 100%;
+		}
+
+		figure.figure figcaption {
+			color: #999999;
+			font-size: 0.85em;
+			line-height: 1.6;
+			padding-top: 0.75em;
+		}
+
+/* Cards (donation routes, objectives) ------------------------------------ */
+
+	.cards {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		margin: 0 0 2em -2em;
+	}
+
+		.cards > .card {
+			-moz-flex: 1 1 15em;
+			-webkit-flex: 1 1 15em;
+			-ms-flex: 1 1 15em;
+			flex: 1 1 15em;
+			margin: 0 0 2em 0;
+			padding: 0 0 0 2em;
+		}
+
+			.cards > .card > .inner {
+				background: #fafafa;
+				border-top: solid 4px #4acaa8;
+				height: 100%;
+				padding: 1.75em;
+			}
+
+				.cards > .card > .inner > :last-child {
+					margin-bottom: 0;
+				}
+
+/* Callout / appeal ------------------------------------------------------- */
+
+	.callout {
+		background: #fafafa;
+		border-left: solid 4px #4acaa8;
+		font-size: 1.1em;
+		margin: 0 0 2em 0;
+		padding: 1.5em 1.75em;
+	}
+
+		.callout > :last-child {
+			margin-bottom: 0;
+		}
+
+	.note {
+		color: #999999;
+		font-size: 0.85em;
+		line-height: 1.7;
+	}
+
+/* Tables ----------------------------------------------------------------- */
+
+	.table-wrapper table td.amount,
+	.table-wrapper table th.amount {
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	.table-wrapper table tfoot td {
+		font-weight: 700;
+	}

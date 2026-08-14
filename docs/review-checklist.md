@@ -15,16 +15,30 @@ page.
 
 ## Content Completeness
 
+Content is checked against the project proposal
+(`project_plan/PP/PP.html`, `project_plan/PP_en.pdf`), which supersedes
+the retreat-concept brief. Every item below applies to **both**
+`index.html` (English) and `bn.html` (Bengali).
+
 - [ ] Brand/logo is visible near the top of the page
-- [ ] The page clearly introduces the Shesher Kobita concept
-- [ ] Facilities are described
-- [ ] Village serenity is described
-- [ ] Proximity to Dhaka and modern healthcare is described
-- [ ] Organic food offering is described
-- [ ] Activities are described
-- [ ] Worship access near the mosque is described
-- [ ] Reservation contact `shesherkobita.contact@gmail.com` is present and easy to find
-- [ ] Both concept design images are prominently featured
+- [ ] The purpose of the appeal (one-time construction cost) is stated up front
+- [ ] Key figures match the proposal: BDT 27,982,500 / 60 residents / 11,000 sq ft / 22 decimals
+- [ ] The need (demographics, isolation, service gap) is described
+- [ ] Design, facilities, and services are described
+- [ ] Location, building plan, staffing, and implementation schedule are described
+- [ ] The construction budget table totals 27,982,500
+- [ ] All three donation mechanisms are described (lifetime residence, Sadaqah Jariyah, general)
+- [ ] Trust profile, objectives, and Board of Trustees are listed
+- [ ] Contact `shesherkobita38@gmail.com`, mobile, and bank details are present and easy to find
+- [ ] Proposal renderings and plans are prominently featured
+
+## Bilingual Delivery
+
+- [ ] English and Bengali pages carry the same sections in the same order
+- [ ] Language switcher is visible on both pages and marks the current one
+- [ ] `<html lang>`, canonical, and `hreflang` alternates are correct on both pages
+- [ ] `sitemap.xml` lists both URLs with `xhtml:link` alternates
+- [ ] Figures, budget numbers, and names agree between the two pages
 
 ## Visual / Design Quality
 

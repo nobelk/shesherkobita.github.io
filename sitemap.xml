@@ -1,23 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<url>
 		<loc>https://shesherkobita.com/</loc>
-		<lastmod>2026-05-17</lastmod>
+		<xhtml:link rel="alternate" hreflang="en" href="https://shesherkobita.com/" />
+		<xhtml:link rel="alternate" hreflang="bn" href="https://shesherkobita.com/bn.html" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://shesherkobita.com/" />
+		<lastmod>2026-08-13</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>1.0</priority>
 		<image:image>
-			<image:loc>https://shesherkobita.com/images/shesher_kobita_banner.png</image:loc>
-			<image:title>Shesher Kobita village retreat banner</image:title>
-			<image:caption>Shesher Kobita — village serenity meets modern comfort</image:caption>
+			<image:loc>https://shesherkobita.com/images/pp/aerial-rendering.jpg</image:loc>
+			<image:title>Shesher Kobita Ananda Ashram — aerial rendering</image:title>
+			<image:caption>Conceptual aerial rendering of Shesher Kobita Ananda Ashram, Panchgaon, Araihazar, Narayanganj</image:caption>
 		</image:image>
 		<image:image>
-			<image:loc>https://shesherkobita.com/images/shesher_kobita_logo.png</image:loc>
-			<image:title>Shesher Kobita official logo</image:title>
+			<image:loc>https://shesherkobita.com/images/pp/front-elevation.jpg</image:loc>
+			<image:title>Front-elevation rendering</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/courtyard.jpg</image:loc>
+			<image:title>Landscaped courtyard rendering</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/residential-room.jpg</image:loc>
+			<image:title>Residential room rendering</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/dining-community.jpg</image:loc>
+			<image:title>Dining and community room rendering</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/site-plan.jpg</image:loc>
+			<image:title>Site and landscape plan</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/first-floor-plan.jpg</image:loc>
+			<image:title>First-floor presentation plan</image:title>
 		</image:image>
 		<image:image>
 			<image:loc>https://shesherkobita.com/images/site_location.png</image:loc>
-			<image:title>Site location in Panchgao, Narayanganj, Bangladesh</image:title>
+			<image:title>Site location in Panchgaon, Araihazar, Narayanganj, Bangladesh</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/shesher_kobita_logo.png</image:loc>
+			<image:title>Shesher Kobita Ananda Ashram official logo</image:title>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://shesherkobita.com/bn.html</loc>
+		<xhtml:link rel="alternate" hreflang="bn" href="https://shesherkobita.com/bn.html" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://shesherkobita.com/" />
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://shesherkobita.com/" />
+		<lastmod>2026-08-13</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/aerial-rendering.jpg</image:loc>
+			<image:title>শেষের কবিতা আনন্দ আশ্রম — আকাশ-দৃশ্যের কল্পিত নকশা</image:title>
+			<image:caption>পাঁচগাঁও, আড়াইহাজার, নারায়ণগঞ্জে নির্মিতব্য শেষের কবিতা আনন্দ আশ্রমের কল্পিত নকশা</image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/front-elevation.jpg</image:loc>
+			<image:title>ভবনের সম্মুখভাগের কল্পিত নকশা</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/site-plan.jpg</image:loc>
+			<image:title>প্রকল্পের সাইট ও ল্যান্ডস্কেপ প্ল্যান</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/pp/first-floor-plan.jpg</image:loc>
+			<image:title>দ্বিতীয়তলার প্রেজেন্টেশন প্ল্যান</image:title>
 		</image:image>
 	</url>
 </urlset>

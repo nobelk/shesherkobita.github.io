@@ -1,6 +1,19 @@
 # Shesher Kobita Concept Webpage Brief
 
-## Current Review Status
+## Status: superseded (2026-08-13)
+
+This brief described the original "village retreat" concept page. The
+site has since been rebuilt around the Mitali Hossain Trust project
+proposal (`project_plan/PP/PP.html` in Bengali, `project_plan/PP_en.pdf`
+in English), which is now the authoritative source for all site copy,
+figures, and imagery. The site ships in two languages: `index.html`
+(English) and `bn.html` (Bengali).
+
+The visual direction below (green / white / charcoal, calm and
+uncrowded, generous imagery) still applies. The content sections below
+do not — see the project proposal instead.
+
+## Historical brief
 
 As of 2026-04-10, this repository contains a working static HTML/CSS
 landing page plus the source visual assets. Current review work is
@@ -47,7 +60,7 @@ The final page should cover all of the following topics in a clear single-page f
 7. **Worship Access**
    - State that mosque access is conveniently nearby.
 8. **Reservation Contact**
-   - Include: `shesherkobita.contact@gmail.com`
+   - Include: `shesherkobita38@gmail.com`
 
 ## Content Priorities
 
