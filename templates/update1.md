@@ -1,6 +1,6 @@
 # Update 1 — Redesign on the Colorlib "South" template
 
-Status: plan, reviewed by codex (section 12). Not yet implemented.
+Status: implemented on `template-update` (see section 13). Plan reviewed by codex (section 12).
 Branch: `template-update`
 Template source: `templates/south-master/` (Colorlib "South", Bootstrap 4, CC BY 3.0)
 
@@ -534,3 +534,33 @@ Own checks during review: bundled Owl is a 2.0 beta without `rewind`
 (autoplay moved to our own timer, 6.2); local jQuery is v3.6.0 (no template jQuery
 needed); Owl CSS already has a `.no-js .owl-carousel` rule; South has 17
 `text-transform: uppercase` rules to neutralise for Bengali.
+
+## 13. Implementation notes (2026-09-22)
+
+Deviations from the plan, and why:
+
+- **Owl Carousel** is the official 2.3.4 release (MIT, from the npm
+  tarball), not an extraction from `plugins.js`: the bundled copy is an
+  unversioned 2.0 beta with no licence header. The fallback in section 11
+  was taken.
+- **Smooth scrolling** is CSS `scroll-behavior` (off under reduced
+  motion) with `scroll-margin-top`; `site.js` only moves focus to the
+  target section.
+- **Contact and bank details** stay in the original table in `#eight`
+  (verbatim content) rather than a `.weekly-office-hours` list; the
+  "At a glance" sidebar in `#one` became a brand card with the donate
+  button and contact links, reusing existing wording only.
+- **Section eyebrows** (small nav-label line above each `<h2>`) are
+  omitted where the heading already starts with the nav label.
+- **Pages are generated** by a one-off script that lifts every content
+  block from the previous commit's pages, so wording could not drift.
+  Verified with a per-section content manifest: 245 text units per page
+  (paragraphs, list items, table cells, captions, headings, alt text) all
+  present in the same section, plus all key figures in both languages.
+- **Browser checks** (headless Chromium via Brave) at 1440/1024/768/375 px
+  on both pages: no console errors, no failed requests, no horizontal
+  overflow, one `h1`; mobile menu opens with focus on the first link,
+  Escape closes it and returns focus; carousel buttons, pause and
+  `aria-hidden` on off-screen slides work; scroll-spy marks the current
+  section; with JavaScript off all eight nav links are visible and the
+  first hero image shows; reduced motion disables autoplay and reveal.

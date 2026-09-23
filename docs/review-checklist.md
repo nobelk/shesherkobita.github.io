@@ -31,6 +31,7 @@ the retreat-concept brief. Every item below applies to **both**
 - [ ] Trust profile, objectives, and Board of Trustees are listed
 - [ ] Contact `shesherkobita38@gmail.com`, mobile, and bank details are present and easy to find
 - [ ] Proposal renderings and plans are prominently featured
+- [ ] Early concept gallery is clearly labelled as earlier artwork, not the proposal design
 
 ## Bilingual Delivery
 
@@ -72,6 +73,10 @@ the retreat-concept brief. Every item below applies to **both**
 - [ ] Color contrast is sufficient for body text and CTA text
 - [ ] Heading hierarchy is logical
 - [ ] Email contact is keyboard accessible
+- [ ] Hero carousel can be paused and operated with real buttons; hidden slides are not announced
+- [ ] Mobile menu opens and closes by keyboard (Escape closes, focus returns to the toggle)
+- [ ] Page is fully readable and navigable with JavaScript disabled
+- [ ] Visible "Template by Colorlib" credit (CC BY 3.0) is present on both pages
 
 ## Ready-to-Open Static Delivery
 

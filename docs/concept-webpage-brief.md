@@ -3,7 +3,7 @@
 ## Status: superseded (2026-08-13)
 
 This brief described the original "village retreat" concept page. The
-site has since been rebuilt around the Mitali Hossain Trust project
+site has since been rebuilt around the Mitali Mojammel Trust project
 proposal (`project_plan/PP/PP.html` in Bengali, `project_plan/PP_en.pdf`
 in English), which is now the authoritative source for all site copy,
 figures, and imagery. The site ships in two languages: `index.html`
