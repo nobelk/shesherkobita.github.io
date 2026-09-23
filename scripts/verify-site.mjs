@@ -149,7 +149,7 @@ for (const page of PAGES) {
 const navIds = PAGES.map((page) => {
 	const html = existsSync(join(root, page.file)) ? read(page.file) : '';
 	const nav = html.match(/<nav id="nav"[^>]*>([\s\S]*?)<\/nav>/);
-	return nav ? (nav[1].match(/href="#([a-z]+)"/g) || []).join(',') : '';
+	return nav ? (nav[1].match(/href="#([a-z][a-z0-9-]*)"/g) || []).join(',') : '';
 });
 PAGES.forEach((page, i) => {
 	if (!navIds[i]) fail(`${page.file}: <nav id="nav"> has no section links`);
