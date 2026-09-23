@@ -5,7 +5,7 @@
 	Run with `npm test`. Checks that every local asset referenced by the HTML
 	pages exists, that in-page anchors resolve, that the English and Bengali
 	pages stay in sync (hreflang, canonical, contact details, nav sections),
-	that every proposal and concept image is used on both pages, that no
+	that every proposal, concept and flyer image is used on both pages, that no
 	template filler survives, and that sitemap.xml points only at real files.
 */
 
@@ -23,7 +23,7 @@ const PAGES = [
 ];
 
 /* Every file in these folders must be shown on both pages. */
-const IMAGE_DIRS = ['images/pp', 'images/concept'];
+const IMAGE_DIRS = ['images/pp', 'images/concept', 'images/flyers'];
 /* Strings that only appear if template demo content leaked into a page. */
 const TEMPLATE_LEFTOVERS = [
 	'southtemplate', 'Lorem', 'Suspendisse', 'Los Angeles', 'img/bg-img', 'img/core-img',
@@ -86,7 +86,7 @@ for (const page of PAGES) {
 			fail(`${rel}: ${referrer} references missing file ${target}`);
 	}
 
-	/* Every proposal and concept image is used. */
+	/* Every proposal, concept and flyer image is used. */
 	for (const dir of IMAGE_DIRS) {
 		for (const name of readdirSync(join(root, dir))) {
 			if (name.startsWith('.')) continue;

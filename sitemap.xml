@@ -91,6 +91,18 @@
 			<image:loc>https://shesherkobita.com/images/concept/breaking-ground.jpg</image:loc>
 			<image:title>Illustration — breaking ground for Shesher Kobita</image:title>
 		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/pension-story.jpg</image:loc>
+			<image:title>Flyer — a home of one's own in later life</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/lifetime-home.jpg</image:loc>
+			<image:title>Flyer — lifetime residential rights</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/ways-to-help.jpg</image:loc>
+			<image:title>Flyer — ways to help</image:title>
+		</image:image>
 	</url>
 	<url>
 		<loc>https://shesherkobita.com/bn.html</loc>
@@ -116,6 +128,18 @@
 		<image:image>
 			<image:loc>https://shesherkobita.com/images/pp/first-floor-plan.jpg</image:loc>
 			<image:title>দ্বিতীয়তলার প্রেজেন্টেশন প্ল্যান</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/pension-story.jpg</image:loc>
+			<image:title>লিফলেট — শেষ জীবনের নিজের একটি ঘর</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/lifetime-home.jpg</image:loc>
+			<image:title>লিফলেট — আপনি কি একা?</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/ways-to-help.jpg</image:loc>
+			<image:title>লিফলেট — আপনি যেভাবে সহযোগিতা করতে পারেন</image:title>
 		</image:image>
 	</url>
 </urlset>
