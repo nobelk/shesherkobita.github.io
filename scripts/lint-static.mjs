@@ -10,10 +10,11 @@
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
+import { pageAssetRefs } from './asset-refs.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PAGES = ['index.html', 'bn.html'];
-const BALANCED_TAGS = ['html', 'head', 'body', 'section', 'div', 'nav', 'ul', 'table', 'figure', 'article'];
+const BALANCED_TAGS = ['html', 'head', 'body', 'header', 'main', 'footer', 'section', 'div', 'nav', 'ul', 'table', 'figure', 'article'];
 const MAX_ASSET_BYTES = 1_500_000;
 
 const problems = [];
@@ -52,16 +53,9 @@ for (const rel of PAGES) {
 	for (const m of html.match(/(?:src|href)="http:\/\/[^"]*"/g) || [])
 		warn(`${rel}: insecure reference ${m}`);
 
-	/* Referenced local assets must be small enough for a slow connection. */
-	const refs = new Set();
-	const re = /\b(?:src|href)\s*=\s*"([^"]+)"/g;
-	let m;
-	while ((m = re.exec(html)) !== null) {
-		const value = m[1];
-		if (/^(https?:|mailto:|tel:|data:|#|\/\/)/i.test(value)) continue;
-		refs.add(value.split(/[?#]/)[0]);
-	}
-	for (const ref of refs) {
+	/* Referenced local assets (including those named by stylesheets) must be
+	   small enough for a slow connection. */
+	for (const ref of pageAssetRefs(root, rel, raw).keys()) {
 		const file = join(root, ref);
 		if (!existsSync(file)) continue;
 		const bytes = statSync(file).size;

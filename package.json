@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "typecheck": "node --check scripts/verify-site.mjs && node --check scripts/lint-static.mjs",
+    "typecheck": "node --check scripts/asset-refs.mjs && node --check scripts/verify-site.mjs && node --check scripts/lint-static.mjs",
     "test": "node scripts/verify-site.mjs",
     "lint": "node scripts/lint-static.mjs"
   }

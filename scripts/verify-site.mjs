@@ -4,13 +4,15 @@
 
 	Run with `npm test`. Checks that every local asset referenced by the HTML
 	pages exists, that in-page anchors resolve, that the English and Bengali
-	pages stay in sync (hreflang, canonical, contact details), and that
-	sitemap.xml points only at real files.
+	pages stay in sync (hreflang, canonical, contact details, nav sections),
+	that every proposal and concept image is used on both pages, that no
+	template filler survives, and that sitemap.xml points only at real files.
 */
 
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
+import { pageAssetRefs, stripHtmlComments } from './asset-refs.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = 'https://shesherkobita.com';
@@ -19,6 +21,19 @@ const PAGES = [
 	{ file: 'index.html', lang: 'en', canonical: `${SITE}/`, alternate: 'bn.html' },
 	{ file: 'bn.html', lang: 'bn', canonical: `${SITE}/bn.html`, alternate: 'index.html' }
 ];
+
+/* Every file in these folders must be shown on both pages. */
+const IMAGE_DIRS = ['images/pp', 'images/concept'];
+/* Strings that only appear if template demo content leaked into a page. */
+const TEMPLATE_LEFTOVERS = [
+	'southtemplate', 'Lorem', 'Suspendisse', 'Los Angeles', 'img/bg-img', 'img/core-img',
+	'maps.googleapis.com', 'preloader', 'plugins.js', 'classy-nav.min.js', 'document.write'
+];
+/* Stable phrases from the two disclaimers each page must keep. */
+const DISCLAIMERS = {
+	en: ['Authoritative citations will be appended', 'subject to final design approval'],
+	bn: ['তথ্যসূত্র প্রসঙ্গে', 'অনুমোদন সাপেক্ষে পরিবর্তনযোগ্য']
+};
 
 const failures = [];
 const fail = (msg) => failures.push(msg);
@@ -36,12 +51,6 @@ function attrValues(html, attrs) {
 
 function ids(html) {
 	return new Set(attrValues(html, ['id']));
-}
-
-function isLocalAsset(value) {
-	if (!value) return false;
-	if (/^(https?:|mailto:|tel:|data:|#|\/\/)/i.test(value)) return false;
-	return true;
 }
 
 for (const page of PAGES) {
@@ -70,12 +79,39 @@ for (const page of PAGES) {
 	if (/shesherkobita\.contact@gmail\.com/.test(html))
 		fail(`${rel}: stale contact address shesherkobita.contact@gmail.com still present`);
 
-	/* Every local asset resolves. */
-	for (const value of attrValues(html, ['src', 'href'])) {
-		if (!isLocalAsset(value)) continue;
-		const target = value.split(/[?#]/)[0];
+	/* Every local asset resolves, including files pulled in by stylesheets. */
+	const refs = pageAssetRefs(root, rel, html);
+	for (const [target, referrer] of refs) {
 		if (!existsSync(join(root, target)))
-			fail(`${rel}: references missing file ${target}`);
+			fail(`${rel}: ${referrer} references missing file ${target}`);
+	}
+
+	/* Every proposal and concept image is used. */
+	for (const dir of IMAGE_DIRS) {
+		for (const name of readdirSync(join(root, dir))) {
+			if (name.startsWith('.')) continue;
+			if (!refs.has(`${dir}/${name}`)) fail(`${rel}: ${dir}/${name} is not used`);
+		}
+	}
+
+	/* No template demo content, and the CC BY credit stays visible. */
+	const live = stripHtmlComments(html);
+	for (const needle of TEMPLATE_LEFTOVERS) {
+		if (live.includes(needle)) fail(`${rel}: template leftover "${needle}"`);
+	}
+	if (!/<a\b[^>]*href="https:\/\/colorlib\.com\/?"/.test(live))
+		fail(`${rel}: Colorlib template credit link missing`);
+
+	/* Both disclaimers survive. */
+	for (const phrase of DISCLAIMERS[page.lang]) {
+		if (!live.includes(phrase)) fail(`${rel}: disclaimer text "${phrase}" missing`);
+	}
+
+	/* Bengali fragments on the English page are marked for screen readers. */
+	if (page.lang === 'en') {
+		for (const [tag] of live.matchAll(/<[a-z0-9]+\b[^>]*\bclass="(?:[^"]*\s)?bn(?:\s[^"]*)?"[^>]*>/gi)) {
+			if (!/\blang="bn"/.test(tag)) fail(`${rel}: .bn element without lang="bn" — ${tag.slice(0, 80)}`);
+		}
 	}
 
 	/* Every in-page anchor resolves. */
@@ -100,14 +136,23 @@ for (const page of PAGES) {
 		} catch (err) {
 			fail(`${rel}: JSON-LD does not parse — ${err.message}`);
 		}
+		/* Site URLs in structured data point at real files. */
+		for (const [url] of json.matchAll(/https:\/\/shesherkobita\.com\/[^"#\s]*/g)) {
+			const path = url.slice(`${SITE}/`.length);
+			if (path && !existsSync(join(root, path)))
+				fail(`${rel}: JSON-LD URL ${url} does not resolve to a file`);
+		}
 	}
 }
 
 /* Nav parity: both pages expose the same section ids in the same order. */
 const navIds = PAGES.map((page) => {
 	const html = existsSync(join(root, page.file)) ? read(page.file) : '';
-	const nav = html.match(/<nav id="nav">([\s\S]*?)<\/nav>/);
+	const nav = html.match(/<nav id="nav"[^>]*>([\s\S]*?)<\/nav>/);
 	return nav ? (nav[1].match(/href="#([a-z]+)"/g) || []).join(',') : '';
+});
+PAGES.forEach((page, i) => {
+	if (!navIds[i]) fail(`${page.file}: <nav id="nav"> has no section links`);
 });
 if (navIds[0] !== navIds[1])
 	fail(`nav sections differ between index.html (${navIds[0]}) and bn.html (${navIds[1]})`);
