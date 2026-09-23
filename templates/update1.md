@@ -374,7 +374,7 @@ Heading levels: `h1` hero, `h2` section titles, `h3` sub-headings,
 4. **Images** — a static strip of 4 `pp/` thumbnails linking to `#three`
    (no second carousel: fewer a11y problems, nothing to pause).
 
-Copyright line: "© 2026 Shesher Kobita Ananda Ashram · Mitali Mojammel
+Copyright line: "© 2026 Shesher Kobita Ananda Ashram · Mitali Mozammel
 Trust. All rights reserved. · Template by
 <a href="https://colorlib.com">Colorlib</a>" (Bengali text + same credit
 on `bn.html`).

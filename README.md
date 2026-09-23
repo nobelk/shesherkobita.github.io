@@ -1,7 +1,7 @@
 # Shesher Kobita Ananda Ashram
 
 A bilingual static site for **Shesher Kobita Ananda Ashram** (শেষের কবিতা আনন্দ আশ্রম) — a dignified
-residential care and service centre for older persons being built by Mitali Mojammel Trust in
+residential care and service centre for older persons being built by Mitali Mozammel Trust in
 Panchgaon, Araihazar, Narayanganj, Bangladesh.
 
 - `index.html` — English
@@ -43,7 +43,7 @@ These licences cover the layout and code only, not the site's content.
 
 ## Copyright
 
-Copyright (c) 2026 Shesher Kobita Ananda Ashram · Mitali Mojammel Trust. All rights reserved.
+Copyright (c) 2026 Shesher Kobita Ananda Ashram · Mitali Mozammel Trust. All rights reserved.
 
 All content, images, copy, and design assets on this site are proprietary
 and may not be reproduced, redistributed, or used in derivative works
