@@ -31,7 +31,7 @@ the retreat-concept brief. Every item below applies to **both**
 - [ ] Trust profile, objectives, and Board of Trustees are listed
 - [ ] Contact `shesherkobita38@gmail.com`, mobile, and bank details are present and easy to find
 - [ ] Proposal renderings and plans are prominently featured
-- [ ] Early concept gallery is clearly labelled as earlier artwork, not the proposal design
+- [ ] Flyers in the For You section are captioned: the correct phone number is given and the earlier concept design is identified
 
 ## Bilingual Delivery
 

@@ -48,48 +48,20 @@
 			<image:title>Shesher Kobita Ananda Ashram official logo</image:title>
 		</image:image>
 		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/courtyard-aerial.jpg</image:loc>
-			<image:title>Early concept render — courtyard scheme, aerial view</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/courtyard-garden.jpg</image:loc>
-			<image:title>Early concept render — garden courtyard</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/library-interior.jpg</image:loc>
-			<image:title>Early concept render — library reading room</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/courtyard-library-sketch.jpg</image:loc>
-			<image:title>Early concept sketches — courtyard walkway and library corner</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/concept-sketch-aerial.jpg</image:loc>
-			<image:title>Early concept sketch — aerial view</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/concept-sketch-sections.jpg</image:loc>
-			<image:title>Early concept sketch — elevation and cross-section</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/concept-sketch-plan.jpg</image:loc>
-			<image:title>Early concept sketch — floor plan</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/concept-board-colour.jpg</image:loc>
-			<image:title>Early concept board — colour renders</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/concept-board-sketch.jpg</image:loc>
-			<image:title>Early concept board — pencil sketches</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://shesherkobita.com/images/concept/concept-board-sepia.jpg</image:loc>
-			<image:title>Early concept board — sepia</image:title>
-		</image:image>
-		<image:image>
 			<image:loc>https://shesherkobita.com/images/concept/breaking-ground.jpg</image:loc>
 			<image:title>Illustration — breaking ground for Shesher Kobita</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/pension-story.jpg</image:loc>
+			<image:title>Flyer — a home of one's own in later life</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/lifetime-home.jpg</image:loc>
+			<image:title>Flyer — lifetime residential rights</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/ways-to-help.jpg</image:loc>
+			<image:title>Flyer — ways to help</image:title>
 		</image:image>
 	</url>
 	<url>
@@ -116,6 +88,18 @@
 		<image:image>
 			<image:loc>https://shesherkobita.com/images/pp/first-floor-plan.jpg</image:loc>
 			<image:title>দ্বিতীয়তলার প্রেজেন্টেশন প্ল্যান</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/pension-story.jpg</image:loc>
+			<image:title>লিফলেট — শেষ জীবনের নিজের একটি ঘর</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/lifetime-home.jpg</image:loc>
+			<image:title>লিফলেট — আপনি কি একা?</image:title>
+		</image:image>
+		<image:image>
+			<image:loc>https://shesherkobita.com/images/flyers/ways-to-help.jpg</image:loc>
+			<image:title>লিফলেট — আপনি যেভাবে সহযোগিতা করতে পারেন</image:title>
 		</image:image>
 	</url>
 </urlset>
